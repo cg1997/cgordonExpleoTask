@@ -17,10 +17,10 @@ public class TC02_DescriptionLoadTest {
         //driver goes to webpage
         driver.get(pageURL);
 
-        //Grabs string value from title element by finding it by the xpath
+        //Grabs string value from description element by finding it by the xpath
         actualPageDescription = driver.findElement(By.xpath("/html/body/div[2]/div/div/p")).getText();
 
-        //Checks if the expected string matches the string from the page title
+        //Checks if the expected string matches the string from the page description
         if (actualPageDescription.equals(expectedPageDescription)){
             System.out.println("Message: Passed - Description Text Found");
         } else {
