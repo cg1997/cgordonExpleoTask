@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
+//Test for checking if the Title in the webpage has loaded correctly TC01
 public class TC01_TitleLoadTest {
 
     public static void main(String[] args) throws Exception{

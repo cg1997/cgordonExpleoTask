@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
+//Test for checking if the Button in the webpage has loaded correctly TC03
 public class TC03_ButtonLoadTest {
 
     public static void main(String[] args) throws Exception{
@@ -20,7 +22,8 @@ public class TC03_ButtonLoadTest {
         //Grabs string value from the button element by finding it by the xpath
         actualButtonLabel = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[1]/a[1]")).getAttribute("class");
 
-        if (actualButtonLabel.contentEquals(expectedButtonLabel)){
+        //Checks if the expected string matches the string from the button
+        if (actualButtonLabel.equals(expectedButtonLabel)){
             System.out.println("Message: Passed - Button Text Found");
         } else {
             System.out.println("Message: Failed - Button Text Not Found");

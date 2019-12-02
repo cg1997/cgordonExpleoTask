@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
+//Test for checking if the Description in the webpage has loaded correctly TC02
 public class TC02_DescriptionLoadTest {
 
     public static void main(String[] args) throws Exception{
