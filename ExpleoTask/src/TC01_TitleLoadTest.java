@@ -23,7 +23,7 @@ public class TC01_TitleLoadTest {
 
         //Checks if the expected string matches the string from the page title
         if (actualPageTitle.equals(expectedPageTitle)){
-            System.out.println("Message: Passed! - Title Text Found");
+            System.out.println("Message: Passed - Title Text Found");
         } else {
             System.out.println("Message: Failed - Title Text Not Found");
         }
