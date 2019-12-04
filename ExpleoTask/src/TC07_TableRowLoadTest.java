@@ -4,9 +4,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Table row in the webpage has loaded correctly TC07
+//Test for checking if the inital table row in the webpage has loaded correctly TC07
 public class TC07_TableRowLoadTest {
 
     public static void main(String[] args) throws Exception {
@@ -18,7 +19,7 @@ public class TC07_TableRowLoadTest {
         String actualColumnValue5 = "";
         String actualColumnValue6 = "";
 
-        //Arraylists for expected titles and actual titles for comparisons
+        //Arraylists for expected row values and actual row values for comparisons
         ArrayList<String> allExpectedColumnValues = new ArrayList<String>(Arrays.asList("Iuvaret0", "Apeirian0", "Adipisci0", "Definiebas0", "Consequuntur0", "Phaedrum0"));
         ArrayList<String> allActualColumnValues = new ArrayList<String>();
 
@@ -28,6 +29,9 @@ public class TC07_TableRowLoadTest {
 
         //driver goes to webpage
         driver.get(baseUrl);
+
+        //Wait for page to load
+        TimeUnit.SECONDS.sleep(2);
 
         //Each row value is added to the arraylist
         actualColumnValue1 = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();
@@ -46,9 +50,9 @@ public class TC07_TableRowLoadTest {
 
         //Grabs arraylists for the row values and compares them with the expected result
         if (allActualColumnValues.equals(allExpectedColumnValues)) {
-            System.out.println("Message: Passed! - Text Found");
+            System.out.println("Message: Passed - Row Text Found - Initial Row Loaded");
         } else {
-            System.out.println("Message: Failed - Text Not Found");
+            System.out.println("Message: Failed - Row Text Not Found - Initial Row Not Loaded");
         }
 
         //After the result the driver is closed

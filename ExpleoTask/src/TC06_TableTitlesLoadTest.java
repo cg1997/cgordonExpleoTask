@@ -4,9 +4,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Table titles in the webpage has loaded correctly TC06
+//Test for checking if the Table titles in the webpage have loaded correctly TC06
 public class TC06_TableTitlesLoadTest {
 
     public static void main(String[] args) throws Exception {
@@ -30,6 +31,9 @@ public class TC06_TableTitlesLoadTest {
         //driver goes to webpage
         driver.get(baseUrl);
 
+        //Wait for page to load
+        TimeUnit.SECONDS.sleep(2);
+
         //Each title is added to the arraylist
         actualTitle1 = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/table/thead/tr/th[1]")).getText();
         allActualTitles.add(actualTitle1);
@@ -49,9 +53,9 @@ public class TC06_TableTitlesLoadTest {
 
         //Grabs arraylists for the table titles and compares them with the expected result
         if (allActualTitles.equals(allExpectedTitles)) {
-            System.out.println("Message: Passed - Table Titles Found");
+            System.out.println("Message: Passed - Table Titles Found - Table Titles Loaded");
         } else {
-            System.out.println("Message: Failed - Table Titles Not Found");
+            System.out.println("Message: Failed - Table Titles Not Found - Table Titles Not Loaded");
         }
 
         //After the result the driver is closed

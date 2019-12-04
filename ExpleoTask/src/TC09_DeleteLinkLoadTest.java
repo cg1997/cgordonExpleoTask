@@ -24,9 +24,9 @@ public class TC09_DeleteLinkLoadTest {
 
         //Checks if the expected string matches the string from the table delete link
         if (actualRowValue.contentEquals(expectedRowValue)){
-            System.out.println("Message: Passed - Delete Link Found");
+            System.out.println("Message: Passed - Delete Link Found - Delete Link Loaded");
         } else {
-            System.out.println("Message: Failed - Delete Link Not Found");
+            System.out.println("Message: Failed - Delete Link Not Found - Delete Link Not Loaded");
         }
 
         //After the result the driver is closed

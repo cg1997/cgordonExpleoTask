@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
 //Test for checking if the Description in the webpage has loaded correctly TC02
 public class TC02_DescriptionLoadTest {
@@ -19,14 +21,17 @@ public class TC02_DescriptionLoadTest {
         //driver goes to webpage
         driver.get(pageURL);
 
-        //Grabs string value from description element by finding it by the xpath
+        //Wait for page to load
+        TimeUnit.SECONDS.sleep(2);
+
+        //Grabs string value from description by finding it by its xpath
         actualPageDescription = driver.findElement(By.xpath("/html/body/div[2]/div/div/p")).getText();
 
         //Checks if the expected string matches the string from the page description
         if (actualPageDescription.equals(expectedPageDescription)){
-            System.out.println("Message: Passed - Description Text Found");
+            System.out.println("Message: Passed - Description Text Found - Description Loaded");
         } else {
-            System.out.println("Message: Failed - Description Text Not Found");
+            System.out.println("Message: Failed - Description Text Not Found - Description Not Loaded");
         }
 
         //After the result the driver is closed
