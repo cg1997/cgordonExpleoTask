@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the link takes the user to the hyperlinked page TC12
+//Test for checking if the link takes the user to the hyperlinked page - TC12
 public class TC12_HyperlinkNewPageTest {
 
     public static void main(String[] args) throws Exception{

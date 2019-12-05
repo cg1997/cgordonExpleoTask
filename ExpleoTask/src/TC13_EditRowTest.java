@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the initial row allows the user to edit it TC13
+//Test for checking if the initial row allows the user to edit it - TC13
 public class TC13_EditRowTest {
     public static void main(String[] args) throws Exception{
 
@@ -31,7 +31,7 @@ public class TC13_EditRowTest {
         Boolean check = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/input[1]")).isDisplayed();
 
 
-        //Checks if row was editable by checking if a input field was there or not
+        //Checks if row was editable by checking if a input field was there or not by checking the boolean check
         if (check == true){
             System.out.println("Message: Passed - Row Deleted");
         } else {

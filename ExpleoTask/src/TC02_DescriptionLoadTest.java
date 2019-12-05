@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Description in the webpage has loaded correctly TC02
+//Test for checking if the Description in the webpage has loaded correctly - TC02
 public class TC02_DescriptionLoadTest {
 
     public static void main(String[] args) throws Exception{
@@ -27,7 +27,7 @@ public class TC02_DescriptionLoadTest {
         //Grabs string value from description by finding it by its xpath
         actualPageDescription = driver.findElement(By.xpath("/html/body/div[2]/div/div/p")).getText();
 
-        //Checks if the expected string matches the string from the page description
+        //Checks if the expected description string matches the actual string from the page description
         if (actualPageDescription.equals(expectedPageDescription)){
             System.out.println("Message: Passed - Description Text Found - Description Loaded");
         } else {

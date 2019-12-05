@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Title in the webpage has loaded correctly TC01
+//Test for checking if the Title in the webpage has loaded correctly - TC01
 public class TC01_TitleLoadTest {
 
     public static void main(String[] args) throws Exception{
@@ -27,7 +27,7 @@ public class TC01_TitleLoadTest {
         //Grabs string value from the title by finding it by its xpath
         actualPageTitle = driver.findElement(By.xpath("/html/body/div[2]/div/div/h3")).getText();
 
-        //Checks if the expected string matches the string from the page title
+        //Checks if the expected title string matches the actual string from the page title
         if (actualPageTitle.equals(expectedPageTitle)){
             System.out.println("Message: Passed - Title Text Found - Title Loaded");
         } else {

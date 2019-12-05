@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the initial row has deleted correctly TC14
+//Test for checking if the first row has deleted correctly - TC14
 public class TC14_DeleteRowTest {
     public static void main(String[] args) throws Exception{
 
@@ -27,10 +27,10 @@ public class TC14_DeleteRowTest {
         WebElement deleteLink = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[7]/a[2]"));
         deleteLink.click();
 
-        //Grabs string value from new first row element by finding it by the xpath
+        //Grabs string value from new first row element by finding it by its xpath
         newRowOne = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();
 
-        //Checks if row was deleted by comparing the strings for the first row with the original and the new one
+        //Checks if row was deleted by comparing the strings for the new first row with the original one
         if (!newRowOne.equals(originalRowOne)){
             System.out.println("Message: Passed - Row Deleted");
         } else {

@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Hyperlink in the webpage has loaded correctly TC11
+//Test for checking if the Hyperlink in the webpage has loaded correctly - TC11
 public class TC11_HyperlinkLoadTest {
 
     public static void main(String[] args) throws Exception{
@@ -27,8 +27,8 @@ public class TC11_HyperlinkLoadTest {
         //Grabs string value from the Hyperlink element by finding it by its xpath
         actualHyperlink = driver.findElement(By.xpath("/html/body/div[3]/div/div/a")).getAttribute("href");
 
-        //Checks if the expected hyperlink matches the string from the success button
-        if (actualHyperlink.contentEquals(expectedHyperlink)){
+        //Checks if the expected hyperlink matches the string from the expected result
+        if (actualHyperlink.equals(expectedHyperlink)){
             System.out.println("Message: Passed - Hyperlink Found - Hyperlink Loaded");
         } else {
             System.out.println("Message: Failed - Hyperlink Not Found - Hyperlink Not Loaded");

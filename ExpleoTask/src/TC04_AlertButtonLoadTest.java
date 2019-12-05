@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Alert Button in the webpage has loaded correctly TC04
+//Test for checking if the Alert Button in the webpage has loaded correctly - TC04
 public class TC04_AlertButtonLoadTest {
 
     public static void main(String[] args) throws Exception{
@@ -27,7 +27,7 @@ public class TC04_AlertButtonLoadTest {
         //Grabs string value from the alert button by finding it its xpath
         actualAlertButtonLabel = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[1]/a[2]")).getAttribute("class");
 
-        //Checks if the expected string matches the string from the alert
+        //Checks if the expected alert button string matches the string from the actual alert button
         if (actualAlertButtonLabel.equals(expectedAlertButtonLabel)){
             System.out.println("Message: Passed - Alert Button Text Found - Alert Button Found");
         } else {

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the inital table row in the webpage has loaded correctly TC07
+//Test for checking if the inital table row in the webpage has loaded correctly - TC07
 public class TC07_TableRowLoadTest {
 
     public static void main(String[] args) throws Exception {
@@ -48,7 +48,7 @@ public class TC07_TableRowLoadTest {
         allActualColumnValues.add(actualColumnValue6);
 
 
-        //Grabs arraylists for the row values and compares them with the expected result
+        //Grabs arraylists for the found row values and compares them with the expected row result arraylist
         if (allActualColumnValues.equals(allExpectedColumnValues)) {
             System.out.println("Message: Passed - Row Text Found - Initial Row Loaded");
         } else {

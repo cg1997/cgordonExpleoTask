@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 //Code adapted and referenced from https://www.guru99.com/first-webdriver-script.html
-//Test for checking if the Table titles in the webpage have loaded correctly TC06
+//Test for checking if the Table titles in the webpage have loaded correctly - TC06
 public class TC06_TableTitlesLoadTest {
 
     public static void main(String[] args) throws Exception {
@@ -51,7 +51,7 @@ public class TC06_TableTitlesLoadTest {
         allActualTitles.add(actualTitle7);
 
 
-        //Grabs arraylists for the table titles and compares them with the expected result
+        //Grabs arraylists for the found table titles and compares them with the expected table title results
         if (allActualTitles.equals(allExpectedTitles)) {
             System.out.println("Message: Passed - Table Titles Found - Table Titles Loaded");
         } else {
